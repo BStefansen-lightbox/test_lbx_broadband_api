@@ -32,4 +32,8 @@ python manage.py runserver
 # list all records in the question table
 
 /polls
+
+# list all records in the portal submissions table
+
+/portal/submissions
 ```

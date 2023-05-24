@@ -33,10 +33,6 @@ python manage.py runserver
 ## Using the API
 
 ```
-# list all records in the question table
-
-/polls
-
 # list all records in the portal submissions table
 
 /portal/submissions

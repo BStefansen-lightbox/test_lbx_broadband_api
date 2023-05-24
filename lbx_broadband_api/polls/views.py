@@ -6,7 +6,9 @@ from .models import Question
 def index(request):
     latest_question_list = Question.objects.order_by("-pub_date")[:5]
     output = "<br><br>".join([f"{q.question_text} <br> {str(q.pub_date)}" for q in latest_question_list])
-    return HttpResponse(output)
+    response = HttpResponse(output)
+    response.headers["foobar"] = 120
+    return response
 
 
 def detail(request, question_id):

@@ -1,3 +1,16 @@
-from django.shortcuts import render
+from django.http import HttpResponse
 
-# Create your views here.
+from .models import Submissions
+
+
+def index(request):
+    return HttpResponse("hello")
+
+
+def submissions(request):
+    latest_submission_list = Submissions.objects.order_by("file_type")[:5]
+    output = "<br><br>".join([f"{s.file_type}" for s in latest_submission_list])
+    response = HttpResponse(output)
+    response.headers["foobar"] = 120
+    return response
+

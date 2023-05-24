@@ -1,3 +1,6 @@
 from django.db import models
 
-# Create your models here.
+
+class Submissions(models.Model):
+    file_type = models.CharField(max_length=200)
+

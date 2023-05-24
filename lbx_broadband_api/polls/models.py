@@ -18,3 +18,4 @@ class Bar(models.Model):
     bar = models.IntegerField(default=0)
     fruit_salad = models.IntegerField(default=0)
 
+

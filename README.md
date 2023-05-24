@@ -7,7 +7,7 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong@Passw0rd>" -p 14
 
 ```
 
-# Setup python dependencies
+## Setup python dependencies
 ```
 pipenv install
 
@@ -15,7 +15,7 @@ pipenv shell
 ```
 
 
-# Migrate django models and run the API locally
+## Migrate django models and run the API locally
 ```
 cd lbx_broadband_api/
 

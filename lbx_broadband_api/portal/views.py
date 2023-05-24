@@ -9,7 +9,7 @@ def index(request):
 
 def submissions(request):
     latest_submission_list = Submissions.objects.order_by("file_type")[:5]
-    output = "<br><br>".join([f"{s.file_type}" for s in latest_submission_list])
+    output = "<br><br>".join([f"{s.__dict__}" for s in latest_submission_list])
     response = HttpResponse(output)
     response.headers["foobar"] = 120
     return response

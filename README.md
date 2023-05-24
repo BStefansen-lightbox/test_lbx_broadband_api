@@ -15,6 +15,21 @@ pipenv shell
 
 cd lbx_broadband_api/
 
+python manage.py makemigrations
+
+python manage.py sqlmigrate {app} {migration_version} 
+
+python manage.py migrate
 
 python manage.py runserver
+
+
+```
+
+## Using the API
+
+```
+# list all records in the question table
+
+/polls
 ```

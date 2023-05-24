@@ -33,7 +33,7 @@ python manage.py runserver
 ## Using the API
 
 ```
-# list all records in the portal submissions table
+# list top 5 records in the portal submissions table
 
 /portal/submissions
 ```
